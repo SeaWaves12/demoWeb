@@ -1,0 +1,192 @@
+//Variable Here
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+$Background1: #1b1b1b;
+$Background2: #323232;
+$HeadingColor: #9ccc65;
+$Color1: #f1f1f1;
+$Color2: #fafafa;
+$Color3: #cccccc;
+//Here Color Code For All
+$ios1: rgb(0, 122, 255);
+$ios2: rgb(52, 199, 89);
+$ios3: rgb(88, 86, 214);
+$ios4: rgb(255, 149, 0);
+$ios5: rgb(255, 45, 85);
+$ios6: rgb(175, 82, 222);
+$ios7: rgb(255, 59, 48);
+$ios8: rgb(90, 200, 250);
+$ios9: rgb(255, 204, 0);
+
+//Here Style Start
+.Main {
+  background: $Background1;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  .MainTop {
+    margin: 0 auto;
+    width: 85%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    min-height: 90vh;
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+    border-bottom: 1px solid rgb(88, 88, 88);
+    div {
+      .MainTopSectionHead {
+        display: flex;
+        padding: 0.5rem;
+        h1 {
+          color: $ios4;
+          text-transform: uppercase;
+          font-weight: 300;
+          font-size: 25pt;
+        }
+      }
+      .MainTopSectionPara {
+        display: flex;
+        padding: 0rem 0.5rem;
+        p {
+          color: $Color1;
+          width: 80%;
+          font-size: 10pt;
+          padding: 0.4rem;
+          opacity: 0.7;
+          line-height: 1.1rem;
+        }
+      }
+      .MainTopSectionButton {
+        display: flex;
+        padding: 0.5rem;
+        button {
+          outline: none;
+          border: none;
+          background: $ios1;
+          color: $Color1;
+          padding: 0.8rem;
+          border-radius: 20pt;
+          margin-right: 0.5rem;
+          display: flex;
+          align-items: center;
+          font-size: 10pt;
+          span {
+            margin-right: 0.2rem;
+            svg {
+              fill: $Color1;
+              height: 12pt;
+              width: 12pt;
+            }
+          }
+          &:nth-child(1) {
+            // background-color: $ios2;
+            background: linear-gradient(90deg, #e91e63, #673ab7);
+          }
+          &:nth-child(2) {
+            // background-color: $ios5;
+            background: linear-gradient(90deg, #d18005, #e91e63);
+          }
+        }
+      }
+    }
+    .MainTopSectionModel {
+      background: black;
+      margin: 1rem;
+      border-radius: 4pt;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10pt;
+      }
+    }
+  }
+  .MainBottom {
+    padding: 0.4rem 0;
+    margin: 0 auto;
+    width: 85%;
+    .MainBottomHead {
+      padding: 1rem 0.4rem;
+      h1 {
+        color: $Color1;
+        cursor: pointer;
+        font-size: 22pt;
+        font-weight: 400;
+        a {
+          color: $ios1;
+          visibility: hidden;
+        }
+        &:hover {
+          a {
+            visibility: visible;
+          }
+        }
+      }
+    }
+    .MainBottomStoryBox {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 0.5rem;
+      .MainBottomStoryBoxItems {
+        background: $Background2;
+        padding: 0.4rem;
+        border-radius: 10pt;
+        .MainBottomStoryBoxItemsTop {
+          display: flex;
+          align-items: center;
+          color: $Color1;
+          padding: 0.2rem 0.4rem;
+          h4 {
+            margin-right: 0.2rem;
+            font-weight: 400;
+            color: $ios9;
+          }
+          span {
+            font-size: 10pt;
+            margin-left: 0.2rem;
+            opacity: 0.6;
+          }
+        }
+        .MainBottomStoryBoxItemsMiddle {
+          padding: 0.2rem 0.4rem;
+          p {
+            color: $Color3;
+            font-size: 10pt;
+          }
+        }
+        .MainBottomStoryBoxItemsBottom {
+          padding: 0.2rem 0.4rem;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          span {
+            display: flex;
+            align-items: center;
+            margin: 0.3rem 0.3rem;
+            svg {
+              height: 14pt;
+              width: 14pt;
+              fill: $Color2;
+              opacity: 0.8;
+            }
+            span {
+              font-size: 10pt;
+              color: $Color2;
+              opacity: 0.7;
+            }
+            &:nth-child(2) {
+              svg {
+                fill: $ios5;
+              }
+            }
+            // &:nth-child(3) {
+            //   svg {
+            //     fill: $ios2;
+            //   }
+            // }
+          }
+        }
+      }
+    }
+  }
+}
