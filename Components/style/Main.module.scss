@@ -127,6 +127,9 @@ $ios9: rgb(255, 204, 0);
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 0.5rem;
+         @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
       .MainBottomStoryBoxItems {
         background: $Background2;
         padding: 0.4rem;
