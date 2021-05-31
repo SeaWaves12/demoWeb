@@ -10,6 +10,8 @@ const SectionStoryBox = () => {
           Read More Raw Confessions <a href="#">#</a>
         </h1>
       </div>
+
+      {/* Data from StaticURL  */}
       <div className={css.MainBottomStoryBox}>
         <StoryBoxItems />
         <StoryBoxItems />
@@ -20,6 +22,7 @@ const SectionStoryBox = () => {
         <StoryBoxItems />
         <StoryBoxItems />
         <StoryBoxItems />
+        {/* WithOut Map You Can Add Google Ads Here */}
         <StoryBoxItems />
       </div>
     </section>

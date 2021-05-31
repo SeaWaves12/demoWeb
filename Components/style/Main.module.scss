@@ -29,9 +29,6 @@ $ios9: rgb(255, 204, 0);
     align-items: center;
     grid-template-columns: 1fr 1fr;
     min-height: 90vh;
-    @media screen and (max-width: 768px) {
-      grid-template-columns: 1fr;
-    }
     border-bottom: 1px solid rgb(88, 88, 88);
     div {
       .MainTopSectionHead {
@@ -101,6 +98,76 @@ $ios9: rgb(255, 204, 0);
       }
     }
   }
+  //This is Middle Part
+  .MainMiddle {
+    padding: 0.6rem 0;
+    margin: 0 auto;
+    width: 85%;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgb(88, 88, 88);
+    .MainMiddleHead {
+      padding: 1rem 0.4rem;
+      h1 {
+        color: $Color1;
+        cursor: pointer;
+        font-size: 22pt;
+        font-weight: 400;
+        a {
+          color: $ios1;
+          visibility: hidden;
+        }
+        &:hover {
+          a {
+            visibility: visible;
+          }
+        }
+      }
+    }
+    .MainMiddleBox {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 0.4rem;
+      div {
+        background-color: $Background2;
+        padding: 0.4rem;
+        border-radius: 10pt;
+        display: grid;
+        justify-content: space-between;
+        h4 {
+          color: $Color1;
+        }
+        p {
+          color: $Color1;
+          opacity: 0.8;
+          font-size: 11pt;
+          line-height: 1.4;
+        }
+      }
+    }
+    .MainMiddleBoxBottom {
+      padding: 0.2rem 0.4rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      span {
+        display: flex;
+        align-items: center;
+        margin: 0.3rem 0.3rem;
+        svg {
+          height: 14pt;
+          width: 14pt;
+          fill: $Color2;
+          opacity: 0.8;
+        }
+        span {
+          font-size: 10pt;
+          color: $Color2;
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+  //This is Bottom Part
   .MainBottom {
     padding: 0.4rem 0;
     margin: 0 auto;
@@ -127,9 +194,7 @@ $ios9: rgb(255, 204, 0);
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 0.5rem;
-         @media screen and (max-width: 768px) {
-        grid-template-columns: 1fr;
-      }
+
       .MainBottomStoryBoxItems {
         background: $Background2;
         padding: 0.4rem;
@@ -189,6 +254,61 @@ $ios9: rgb(255, 204, 0);
             // }
           }
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Main {
+    .MainTop {
+      grid-template-columns: 1fr;
+      min-height: 70vh;
+      div {
+        .MainTopSectionHead {
+          h1 {
+            text-align: center;
+            font-size: 19pt;
+          }
+        }
+        .MainTopSectionPara {
+          margin: 0 auto;
+          justify-content: center;
+          p {
+            text-align: center;
+            width: 80%;
+          }
+        }
+        .MainTopSectionButton {
+          justify-content: space-around;
+          button {
+            font-size: 9pt;
+          }
+        }
+      }
+      .MainTopSectionModel {
+        margin: 0;
+      }
+    }
+    .MainMiddle {
+      .MainMiddleHead {
+        padding: 1rem 0.4rem;
+        h1 {
+          font-size: 18pt;
+        }
+      }
+      .MainMiddleBox {
+        grid-template-columns: 1fr;
+      }
+    }
+    .MainBottom {
+      .MainBottomHead {
+        h1 {
+          font-size: 18pt;
+        }
+      }
+      .MainBottomStoryBox {
+        grid-template-columns: 1fr;
       }
     }
   }
